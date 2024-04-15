@@ -45,6 +45,7 @@ header button {
     border:  none;
     background: none;
     width: fit-content;
+    cursor: pointer;
  }
 
 header nav.mobile {
@@ -79,9 +80,22 @@ header .mobile a {
     line-height: 1.5rem;
 }
 
+header .desktop {
+    display: none;
+}
+
 main {
     max-width: 1110px;
     margin-inline: auto;
+}
+
+.primeira-secao {
+    margin-bottom: 4rem;
+}
+
+.primeira-secao img {
+    width: 100%;
+    margin-bottom: 1.5rem;
 }
 
  .primeira-secao h1 {
@@ -143,24 +157,24 @@ main {
     line-height: 1.625rem;
  }
 
- .treceira-secao > div {
+ .terceira-secao > div {
     display: flex;
     align-items: center;
     gap: 1.5rem;
     margin-bottom: 2rem;
  }
 
- .treceira-secao img {
+ .terceira-secao img {
     max-width: 6.25rem;
  }
 
- .treceira-secao strong {
+ .terceira-secao strong {
     color: var(--silver);
     font-size: 2rem;
     line-height: 100%;
  }
 
- .treceira-secao h2 {
+ .terceira-secao h2 {
     color: var(--dark-blue);
     font-size: 1.125rem;
     font-weight: 800;
@@ -168,13 +182,36 @@ main {
     margin-block: 0.6rem;
  }
 
- .treceira-secao p {
+ .terceira-secao a {
+    text-decoration: none;
+ }
+
+ .terceira-secao p {
     font-size: 0.93575rem;
     line-height: 1.625rem;
     color: var(--gunmetal);
  }
 
- @media(min-widht: 1110px) {
+ @media(min-width: 1110px) {
+    header > button {
+        display: none;
+    }
+
+    header .desktop {
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    header .desktop a:hover {
+        color: var(--vermillion);
+    }
+
+    header .desktop a {
+        font-size: 0.9375rem;
+        line-height: 1.625rem;
+        text-decoration: none;
+        color: var(--gunmetal);
+    }
 
     main {
         display: grid;
@@ -202,23 +239,22 @@ main {
         font-size: 3.5rem;
     }
 
+    .primeira-secao button:hover {
+        background-color: var(--dark-blue);
+        cursor: pointer;
+    }
+
     .segunda-secao h2 {
         font-size: 2.5rem;
     }
 
-    header > button {
-        display: none;
-    }
-
-    header .desktop {
+    .terceira-secao {
         display: flex;
-        gap: 2.5rem;
     }
 
-    header .desktop a {
-        font-size: 0.9375rem;
-        line-height: 1.625rem;
-        text-decoration: none;
-        color: var(--gunmetal);
+    .terceira-secao h2:hover {
+        color: var(--vermillion);
     }
  }
+ 
+ 
